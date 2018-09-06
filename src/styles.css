@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  margin: 15px;
+}
+
+button {
+  padding: 10px 15px;
+  background: rgb(25, 124, 206);
+  color: #fff;
+  border: 1px solid transparent;
+  min-width: 10em;
+}
+
+button.logout-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}

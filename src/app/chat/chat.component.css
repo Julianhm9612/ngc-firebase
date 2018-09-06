@@ -1,6 +1,6 @@
 :host {
   display: flex;
+  flex: 1 0 auto;
   flex-direction: column;
-  width: 100vw;
-  min-height: 100vh;
+  justify-content: flex-end;
 }
