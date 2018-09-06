@@ -6,4 +6,6 @@
 .input-container input {
   display: flex;
   flex: 1 0 auto;
+  font-size: 1em;
+  padding: 5px;
 }
