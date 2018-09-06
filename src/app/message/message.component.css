@@ -19,7 +19,7 @@
 }
 
 .chat-msg.other span {
-  background-attachment: rgb(180, 180, 180);
+  background-color: #dfdfdf;
   color: #333;
   float: right;
 }

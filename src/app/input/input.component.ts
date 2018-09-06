@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { ChatService } from '../chat.service';
 import * as firebase from 'firebase';
 
@@ -10,6 +10,7 @@ import * as firebase from 'firebase';
 export class InputComponent implements OnInit {
 
   @Input() userAuth: string;
+  @ViewChild('chatMsg') inputRef: ElementRef;
 
   constructor(
     private msgService: ChatService
@@ -19,6 +20,7 @@ export class InputComponent implements OnInit {
   }
 
   sendMsg(msg) {
+    console.log(msg);
     if (msg !== null) {
       const message = {
         msg: msg,
@@ -27,6 +29,7 @@ export class InputComponent implements OnInit {
       };
       this.msgService.addMsg(message);
     }
+    this.inputRef.nativeElement.value = '';
   }
 
 }
